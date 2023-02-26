@@ -1,8 +1,7 @@
-import sys
 import random
 
-def main():
-    scramble_length = int(sys.argv[1])
+def gen_scramble(moves):
+    scramble_length = int(moves)
     moves = ["R", "R'", "R2", "L", "L'", "L2", "U", "U'", "U2", "D", "D'", "D2", "F", "F'", "F2", "B", "B'", "B2"]	
     scramble = ""
     
@@ -16,7 +15,3 @@ def main():
     	scramble += " " + moves[random_move]
     	prev_move = moves[random_move]
     	
-    print scramble.strip()
-
-if __name__ == '__main__':
-    main()
